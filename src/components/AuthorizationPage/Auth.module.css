@@ -1,0 +1,59 @@
+.loginContainer {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff; /* Белый фон */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+h2 {
+    margin-top: 0;
+    color: #333; /* Темный серый для заголовка */
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555; /* Серый цвет текста */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 12px);
+    padding: 6px;
+    border: 1px solid #ccc; /* Светло-серая рамка */
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #555; /* Темно-серый цвет кнопки */
+    border: none;
+    border-radius: 4px;
+    color: #fff; /* Белый текст на кнопке */
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #444; /* Темно-серый при наведении */
+}
+
+p {
+    margin-top: 20px;
+    color: #777; /* Светло-серый цвет текста */
+}
+
+a {
+    color: #555; /* Серый цвет ссылки */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

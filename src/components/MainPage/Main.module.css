@@ -1,0 +1,147 @@
+.container {
+    display: flex;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    gap: 20px;
+}
+
+.productimage {
+    width: 100%;
+    height: 300px;
+    background-color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.productdetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.productdetails h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.productdetails p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333333;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sizeoptions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.sizebtn {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: #cccccc;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sizebtn:hover {
+    background-color: #999999;
+}
+
+.productactions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.actionbtn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.actionbtn:hover {
+    background-color: #0056b3;
+}
+
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.modalcontent {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 600px;
+    max-height: 60%;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modalcontent h2 {
+    margin-top: 0;
+}
+
+.reviews {
+    margin-top: 20px;
+    max-height: 200px; /* Задайте фиксированную высоту */
+    overflow-y: auto; /* Добавьте прокрутку по вертикали */
+}
+
+.reviews p {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.closebtn {
+    display: block;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4d4d;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 20px auto 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.closebtn:hover {
+    background-color: #cc0000;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+}

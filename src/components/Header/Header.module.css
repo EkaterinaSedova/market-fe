@@ -1,0 +1,17 @@
+.header {
+    background-color: #a4a4a4; /* Серый фон */
+    color: #333; /* Цвет текста */
+    padding: 20px; /* Внутренний отступ */
+    text-align: center; /* Выравнивание текста по центру */
+    border-bottom: 1px solid #ccc; /* Горизонтальная линия под заголовком */
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerAuthBtn {
+    cursor: pointer;    
+}
+
+.headerAuthBtn:hover {
+    text-decoration: underline;
+}
