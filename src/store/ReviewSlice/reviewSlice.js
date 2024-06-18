@@ -49,6 +49,13 @@ export const createFeedback = createAsyncThunk(
     }
 )
 
+const initialState = {
+    feedbacks: [],
+    showFeedbacks: false,
+    isLoading: false
+}
+
+
 const feedbacksSlice = createSlice({
     name: 'feedbacks',
     initialState,
@@ -61,14 +68,13 @@ const feedbacksSlice = createSlice({
         builder.addCase(getFeedbacks.fulfilled, (state, action) => {
             state.feedbacks = action.payload;
         })
-        builder.addCase(getAverageRating.fulfilled, (state, action) => {
-            let avg = Number(action.payload).toFixed(2)
-            state.avg = avg;
-        })
         builder.addCase(createFeedback.fulfilled, (state, action) => {
             let feedbacks = state.feedbacks;
             feedbacks.push(action.payload);
             state.feedbacks = feedbacks;
+        })
+        builder.addCase(deleteFeedback.fulfilled, (state) => {
+            state.isLoading = false;
         })
     }
 })

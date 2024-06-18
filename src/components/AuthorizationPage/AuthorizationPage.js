@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { REGISTRATE_ROUTE } from '../../routing/paths';
 import Header from '../Header/Header';
 import styles from './Auth.module.css';
 

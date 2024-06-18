@@ -1,0 +1,173 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    max-height: 70%;
+    max-width: 700px;
+    min-width: 40%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.modalTitle {
+    margin: 0;
+}
+
+.modalHeader {
+    padding: 10px;
+}
+
+.modalFooter {
+    padding: 3px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modalBody {
+    padding: 10px;
+    border-top: 1px solid #E5E5EA;
+    border-bottom: 1px solid #E5E5EA;
+    max-height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalBtn {
+    cursor: pointer;
+    font-family: Abel;
+    margin: 5px;
+    font-size: 22px;
+    background: #4776a1;
+    border-radius: 10px;
+    border: none;
+    padding: 1px 10px;
+    color: #ffffff;
+}
+
+.modalBodyBlock {
+}
+
+.modalBodyBlock + .modalBodyBlock {
+    margin-top: 50px;
+}
+
+.modalInput {
+    width: 50%;
+    margin: auto 10px;
+}
+
+.modalChooseSexButton {
+    margin: 0px 5px;
+    padding: 5px 5px;
+}
+
+.modalChooseSexButtonActive {
+    margin: 0px 5px;
+    padding: 5px 5px;
+    border: 2px solid red;
+    border-radius: 50%;
+}
+
+.modalComment {
+    display: flex;
+    justify-content: space-between;
+    min-width: 250px;
+    border-top: 1px solid #E5E5EA;
+    border-bottom: 1px solid #E5E5EA;
+}
+
+.modalComment + .modalComment {
+    border-top: none;
+}
+
+.modalCommentContent {
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.modalCommentContent + .modalCommentContent {
+    margin-bottom: 10px;
+}
+
+.modalCommentText {
+    margin-left: 10px;
+}
+
+.modalCommentTime {
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.deleteBtn {
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.user {
+    margin: 10px 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modalCommentImg {
+    margin-top: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #657d94;
+}
+
+.userNameContainer {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.userNameItem {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.userNameImg {
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #71898b;
+}
+
+.modalRemoveBtn {
+    cursor: pointer;
+    font-family: Abel;
+    margin: 10px 0px 10px 5px;
+    font-size: 18px;
+    background: #4776a1;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+}
+
+.modalFriendContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}

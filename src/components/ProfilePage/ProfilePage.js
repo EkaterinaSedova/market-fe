@@ -1,23 +1,38 @@
 import React from 'react';
+import { toggleForm } from '../../store/UserSlice/userSlice';
 import Header from '../Header/Header'
 import styles from './Profile.module.css'
+import {useDispatch, useSelector} from "react-redux";
+import { getProducts, toggleCreateItemForm } from '../../store/ItemSlice/itemSlice';
 
 const ProfilePage = () => {
     const dispatch = useDispatch();
     const { user, currentUser } = useSelector(({ users }) => users);
+    const {page, setPage} = useState(1);
     const isEditable = currentUser.id === user.id;
     useEffect(() => {
         (async () => {
             await dispatch(getUser({id}));
-            if(+currentId === id) await dispatch(getBookingsOfUser({
-                id: id
-            }))
-            else await dispatch(getBookingsOfUser({
-                id: currentId
-            }))
+            await dispatch(getProducts({
+                id: id,
+                page: page,
+            }));
+            await dispatch(getServices({
+                id: id,
+                page: page,
+            }));
         })()
     }, [dispatch])
-    
+
+    const handleEditClick = () => {
+        dispatch(toggleForm(true))
+    }
+
+    const handleAddClick = () => {
+        dispatch(toggleCreateItemForm);
+    }
+
+
     return (
         <>
             <Header />
@@ -32,8 +47,34 @@ const ProfilePage = () => {
                     <p><strong>Пол:</strong> {user.details.sex}</p>
                     <p><strong>Роль:</strong> {user.role}</p>
                 </div>
-                {isEditable && <button className={styles.editButton}>Изменить</button>}
+                {isEditable && <button className={styles.editButton} onClick={() => handleEditClick}>Изменить</button>}
+                {isEditable && <button className={styles.editButton} onClick={() => handleAddClick}>Добавить товар/услугу</button>}
+                <div className={styles.main}>
+                    <h2>Products</h2>
+                    <div className={styles.productList}>
+                        {products.map((product, index) => (
+                            <div className={styles.product} key={index}>
+                                <NavLink to={ITEM_ROUTE + `/${product.id}`} className={styles.productName}>{product.name}</NavLink>
+                                <p>{product.description}</p>
+                                <p className={styles.price}>{product.price}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className={styles.main}>
+                    <h2>Products</h2>
+                    <div className={styles.productList}>
+                        {services.map((product, index) => (
+                            <div className={styles.product} key={index}>
+                                <NavLink to={ITEM_ROUTE + `/${product.id}`} className={styles.productName}>{product.name}</NavLink>
+                                <p>{product.description}</p>
+                                <p className={styles.price}>{product.price}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
+            <div></div>
         </>
     );
 };
